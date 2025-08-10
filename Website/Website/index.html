@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Essay Writer — Minimal Complex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Minimal, readable font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- p5 for background only -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background canvas sits behind everything -->
+    <div id="bg-canvas"></div>
+
+    <header class="app-header">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Essay Writer</h1>
+      </div>
+      <div class="header-actions" role="group" aria-label="Global actions">
+        <button id="btn-import" class="btn secondary" title="Import JSON">Import</button>
+        <button id="btn-export" class="btn secondary" title="Export JSON">Export</button>
+        <button id="btn-clear"  class="btn danger"    title="Clear all">Clear</button>
+      </div>
+    </header>
+
+    <main class="app-main" role="main">
+      <!-- Left: Steps -->
+      <section class="pane pane-left" aria-label="Steps">
+        <div class="pane-header">
+          <div class="pane-title">
+            <h2>Plan</h2>
+            <span class="muted">Drag to order. No overlap, ever.</span>
+          </div>
+          <div class="pane-tools">
+            <input id="filter" class="input" type="search" placeholder="Filter steps…" />
+            <button id="add-step" class="btn primary">+ Add Step</button>
+          </div>
+        </div>
+
+        <ul id="steps" class="steps" aria-live="polite"></ul>
+      </section>
+
+      <!-- Resizer -->
+      <div id="resizer" role="separator" aria-label="Resize panels" aria-orientation="vertical" tabindex="0"></div>
+
+      <!-- Right: Compose -->
+      <section class="pane pane-right" aria-label="Compose">
+        <div class="pane-header">
+          <div class="pane-title">
+            <h2>Compose</h2>
+            <span class="muted">Generate from your notes</span>
+          </div>
+          <div class="pane-tools">
+            <span id="saved-indicator" class="saved" aria-live="polite">Saved</span>
+          </div>
+        </div>
+
+        <div class="form">
+          <label class="label">Topic</label>
+          <input id="topic" class="input" type="text" placeholder="What is your essay about?" />
+
+          <div class="row">
+            <div class="col">
+              <label class="label">Target words</label>
+              <input id="target" class="input" type="number" min="0" step="50" placeholder="e.g., 800" />
+            </div>
+            <div class="col">
+              <label class="label">Live word count</label>
+              <div id="wordcount" class="counter" aria-live="polite">0 words</div>
+            </div>
+          </div>
+
+          <div class="toolbar" role="group" aria-label="Compose actions">
+            <button id="btn-generate" class="btn primary">Generate</button>
+            <button id="btn-copy" class="btn secondary">Copy</button>
+          </div>
+
+          <textarea id="output" class="textarea" readonly placeholder="Your essay will appear here…"></textarea>
+        </div>
+      </section>
+    </main>
+
+    <!-- App logic & background -->
+    <script src="app.js" defer></script>
+    <script src="sketch.js" defer></script>
+  </body>
+</html>
