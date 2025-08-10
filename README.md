@@ -72,7 +72,7 @@ Backend: **FastAPI** (OpenAI for text + speech). Frontend: **HTML/CSS/JS** (opti
 - **Python 3.11+** — https://www.python.org/downloads/  
 - **Visual Studio Code** — https://code.visualstudio.com/  
 - **Live Server (VS Code extension)** — https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer  
-- **p5.js** (optional) — Getting started: https://p5js.org/get-started/ • Learn: https://p5js.org/learn/  
+- **p5.js** (optional) — Getting started: [https://p5js.org/get-started/ ](https://p5js.org/)
 - **OpenAI API key** — https://platform.openai.com/
 
 ---
@@ -178,9 +178,7 @@ Add p5.js via CDN in `WEBSITE/WEBSITE/index.html` (before `sketch.js`):
 <script src="./sketch.js"></script>
 ```
 
-* p5 “Get Started”: [https://p5js.org/get-started/](https://p5js.org/get-started/)
-* p5 “Learn”: [https://p5js.org/learn/](https://p5js.org/learn/)
-
+* p5 “Get Started”: [[https://p5js.org/get-started/](https://p5js.org/get-started/)](https://p5js.org/)
 ---
 
 ## Environment & dependencies
