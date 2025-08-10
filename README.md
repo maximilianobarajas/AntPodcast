@@ -178,7 +178,7 @@ Add p5.js via CDN in `WEBSITE/WEBSITE/index.html` (before `sketch.js`):
 <script src="./sketch.js"></script>
 ```
 
-* p5 “Get Started”: [[https://p5js.org/get-started/](https://p5js.org/get-started/)](https://p5js.org/)
+* p5 “Get Started”: https://p5js.org/
 ---
 
 ## Environment & dependencies
